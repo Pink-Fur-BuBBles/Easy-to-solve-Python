@@ -96,6 +96,7 @@ else:
 
 ( 2 points; Answer due Week 7 )
 
+Murray Cox is the founder and current chief data activist of Inside Airbnb. He conceived the project, compiled and analyzed the data, and built the site. A variety of collaborators and partners interested in InsideAirbnb also contributed to data updates and maintenance, for example Taylor Higgins, Michael "Ziggy" Mintz, and so on.
 :::
 
 An inline citation example: As discussed on @insideairbnb, there are many...
@@ -107,6 +108,8 @@ A parenthetical citation example: There are many ways to research Airbnb [see, f
 ::: {.duedate}
 
 ( 4 points; Answer due Week 7 )
+
+Because they aim to provide data and advocacy about Airbnb's impact on residential communities. And they work towards a vision where communities are empowered with data and information to understand, decide and control the role of renting residential homes to tourists.
 
 :::
 
