@@ -130,7 +130,7 @@ ax.set_xlim([0,500]);
 ::: {.duedate}
 
 ( 5 points; Answer due Week 8 )
-
+Inside Airbnb collects its data by scraping publicly available information from Airbnb's website. This process involves extracting details such as listing descriptions, host information, availability calendars, and user reviews. The collected data is then verified, cleansed, analyzed and aggregated.
 :::
 
 ## 4. How does the method of collection (Q3) impact the completeness and/or accuracy of the InsideAirbnb data? How well does it represent the process it seeks to study, and what wider issues does this raise?
