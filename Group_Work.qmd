@@ -139,7 +139,8 @@ Inside Airbnb collects its data by scraping publicly available information from 
 
 ( 11 points; Answer due Week 9 )
 
-:::
+:::InsideAirbnb collects data by scraping publicly available Airbnb listings. This method can introduce gaps, such as missing inactive or off-platform listings, and inaccuracies due to scraping errors or Airbnb’s data obfuscation (eg. hidden locations, limited occupancy transparency). The dataset may also be outdated, as listings can change between scraping sessions, including deactivations, modifications, or newly added properties.
+While it provides a snapshot of Airbnb’s activity, it doesn’t fully represent the complexities of host and guest interactions. The data raises concerns about representation bias (excluding hidden transactions), privacy (use of personal data without consent), and policy implications (risk of misleading urban planning decisions based on incomplete data).
 
 ## 5. What ethical considerations does the use of the InsideAirbnb data raise? 
 
