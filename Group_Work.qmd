@@ -72,12 +72,6 @@ Are there any areas on which you would appreciate more detailed feedback if we'r
 See the raw file for examples of how to hide computational output as there is code hidden here.
 
 ```{python}
-#| echo: False
-import os
-import pandas as pd
-```
-
-```{python}
 import os
 import pandas as pd
 
@@ -148,6 +142,7 @@ for filename in os.listdir(input_folder):
                 print(f"Skipping file {filename}: 'Bedroom Category' column not found.")
         except Exception as e:
             print(f"Error processing file {filename}: {e}")
+```
 
 ## 1. Who collected the InsideAirbnb data?
 
