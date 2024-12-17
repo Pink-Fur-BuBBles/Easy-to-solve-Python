@@ -52,14 +52,14 @@ We, JueLin Liu, Yingxi Zhou, Yale Lu, Yuanqing Zhang, Kun Li , pledge our honour
 
 Date:17/12/2024
 
-Student Numbers: JueLin Liu, 24036199 Yingxi Zhou, 23225727 Yale Lu, 24068573 Yuanqing Zhang, 23157049 Kun Li
+Student Numbers:24073575 JueLin Liu, 24036199 Yingxi Zhou, 23225727 Yale Lu, 24068573 Yuanqing Zhang, 23157049 Kun Li
 
 ## Brief Group Reflection
 
-| What Went Well | What Was Challenging |
-| -------------- | -------------------- |
-| A              | Data Collection      |
-| C              | D                    |
+|    What Went Well     | What Was Challenging |
+|    --------------     | -------------------- |
+|   Regression Equation | Data Collection      |
+
 
 ## Priorities for Feedback
 
