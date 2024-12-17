@@ -72,76 +72,7 @@ Are there any areas on which you would appreciate more detailed feedback if we'r
 See the raw file for examples of how to hide computational output as there is code hidden here.
 
 ```{python}
-import os
-import pandas as pd
 
-
-#Clean listings.csv
-
-# Define the relative path to the file
-input_file = 'listings.csv'
-output_file = 'cleaned_listings.csv'
-
-# Load the original CSV file
-data = pd.read_csv(input_file)
-
-# Retain the specified column
-columns_to_keep = ['id', 'neighbourhood', 'latitude', 'longitude', 'room_type', 'price']
-cleaned_data = data[columns_to_keep]
-
-# Delete rows containing null values
-cleaned_data = cleaned_data.dropna()
-
-# Delete duplicate rows
-cleaned_data = cleaned_data.drop_duplicates()
-
-# Save cleaned data to a new CSV file
-cleaned_data.to_csv(output_file, index=False)
-
-print("Cleanup complete, file saved as:", output_file)
-
-
-#Clean london_borough.rar
-
-# Define relative paths to input and output folders
-input_folder = 'london_borough'  # Directory where the original CSV file is stored
-output_folder = 'cleaned_london_borough'  # Directory where processed CSV files are stored
-
-# Make sure the output folder exists
-os.makedirs(output_folder, exist_ok=True)
-
-# Iterate over all CSV files in the input folder
-for filename in os.listdir(input_folder):
-    if filename.endswith('.csv'):
-        input_path = os.path.join(input_folder, filename)  # Construct the input file path
-        output_path = os.path.join(output_folder, f"cleaned_{filename}")  # Construct the output file path
-        
-        try:
-            # Load CSV file
-            data = pd.read_csv(input_path)
-            
-            # Check to see if the "Bedroom Category" column is included.
-            if "Bedroom Category" in data.columns:
-                # Handle duplicate values by grouping, aggregating by "Borough" and "Bedroom Category"
-                data = data.groupby(["Borough", "Bedroom Category"], as_index=False).first()
-                
-                # Convert to Wide Forms
-                bedroom_categories = data.pop("Bedroom Category")
-                wide_data = data.set_index(["Borough", bedroom_categories]).unstack()
-                
-                # Dynamically generated column names
-                wide_data.columns = [f"{category}_{metric}" for category, metric in wide_data.columns]
-                
-                # Delete the "Unnamed:" column
-                wide_data = wide_data.loc[:, ~wide_data.columns.str.contains('^Unnamed')]
-                
-                # Preservation of cleaned data
-                wide_data.reset_index().to_csv(output_path, index=False)
-                print(f"Processed file saved as: {output_path}")
-            else:
-                print(f"Skipping file {filename}: 'Bedroom Category' column not found.")
-        except Exception as e:
-            print(f"Error processing file {filename}: {e}")
 ```
 
 ## 1. Who collected the InsideAirbnb data?
