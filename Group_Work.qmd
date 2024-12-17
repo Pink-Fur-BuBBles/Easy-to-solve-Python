@@ -847,15 +847,18 @@ From 2019 to 2023, London’s Airbnb market peaked in 2021 after a pandemic-rela
 
 ### 2.Geographical Distribution of Airbnb Listings 
 First, after analyzing Airbnb listing patterns in London using K-means clustering and Moran’s I revealed a clear spatial trend: central London has densely clustered listings, while outer areas have fewer. Similar results were confirmed at the Borough level, where rental price data was available.
-############################################################FIGURE!!!!!!!!!
+
+![fig4](https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/refs/heads/main/fig/fig4.jpg)
 
 The kernel density analysis result show that Airbnb listings in London cluster in central areas like Westminster, the West End, and King’s Cross due to tourist attractions and good transport links. Entire homes dominate the city center, offering privacy at higher prices, while private rooms are more dispersed in residential areas like Hackney and Islington, catering to budget travelers. Shared rooms are rare and mostly found in outer neighborhoods, reflecting lower demand.
-############################################################FIGURE!!!!!!!!!
+
+![fig2(a)](https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/refs/heads/main/fig/fig2(a).png)
 
 ### 3.Pricing Differences Across London's Airbnb Listings
 According to the statistics of Airbnb listing data in 2023, the majority of Airbnb listings are "Entire home/apt", accounting for 66.8%. In addition, from the average rent distribution diagram of "Entire home/apt" housing type in Figure 1, it can be seen that there are significant differences in rent in different administrative regions. City centres such as Westminster and Kensington&Chelsea rent for up to £350 a night, while outside the city centre rates are relatively low.
 
-############################################################FIGURE!!!!!!!!!
+![fig3](https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/refs/heads/main/fig/fig(3).png)
+
 :::
 
 ## 7. Drawing on your previous answers, and supporting your response with evidence (*e.g.* figures, maps, EDA/ESDA, and simple statistical analysis/models drawing on experience from, e.g., CASA0007), how *could* the InsideAirbnb data set be used to inform the regulation of Short-Term Lets (STL) in London? 
@@ -867,7 +870,8 @@ First, we tested the relationship between Airbnb density and rental prices in Lo
 ### 2.Spatial Variations in Airbnb's （entire home/apt）Impact on Rent Prices
 To assess the spatial impact of Airbnb's "Entire home/apt" listing density and price on monthly rent levels in different London boroughs. This report uses a geographically weighted regression (GWR) model, a spatial statistical method that takes into account the effects of geographic location on the regression coefficients to provide a more accurate estimate of regional differences. Compared with traditional global regression models, GWR models can reveal spatial differences in the relationship between dependent and independent variables in different regions, thus providing region-specific insights for policy makers. In order to fully understand the market dynamics, the model also includes population density and mean income as control variables to reveal the determinants of rent levels in different regions.
 As shown in Figures below，we found that the impact of Airbnb's "Entire home/apt" type of housing density and price on rents is spatially significant, reflecting differences in economic structure, housing demand and market competition in different parts of London. Specifically, the regression coefficients of Airbnb listings density and housing prices show significant differences in space. For example, the regression coefficient of Airbnb listings density is higher in some regions, such as the downtown and northwest, showing a strong positive effect, while the effect is smaller or even negative in other regions, which may be related to the saturation of housing supply in the region or the lack of demand in the rental market. On the other hand, Airbnb prices have a greater impact on rental levels and a higher regression coefficient in the downtown and southern regions, while the effect is gradually weakened in the northern region, which may reflect the intense market competition and high short-term rental price sensitivity in the southern region.
-############################################################FIGURE!!!!!!!!!
+
+![fig4](https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/refs/heads/main/fig/fig4.jpg)
 
 ### 3.Conclusion: Airbnb's Influence on London's Housing Market
 The regression analysis shows that more Airbnb listings in inner London push up local rental prices by reducing long-term housing supply. This happens because property owners switch to short-term rentals for higher profits, attracting tourists and driving up demand. As a result, local residents face rising rents and housing shortages. According to Garay, Morales, and Wilson (2020), long-term rentals are mainly needed by local residents, while short-term rentals are mostly used by tourists, making local properties more valuable and expensive. That’s why many communities resist Airbnb.To ease this pressure, policymakers could limit short-term rentals, enforce host registration and taxes, and promote affordable long-term housing development. 
