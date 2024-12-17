@@ -1,0 +1,991 @@
+Bedroom_Category,Borough,Count_of_Rents,Year
+Room,Barking and Dagenham,20,2019
+Studio,Barking and Dagenham,20,2019
+One Bedroom,Barking and Dagenham,220,2019
+Two Bedrooms,Barking and Dagenham,380,2019
+Three Bedrooms,Barking and Dagenham,260,2019
+Four or More Bedrooms,Barking and Dagenham,40,2019
+Room,Barnet,20,2019
+Studio,Barnet,110,2019
+One Bedroom,Barnet,400,2019
+Two Bedrooms,Barnet,770,2019
+Three Bedrooms,Barnet,280,2019
+Four or More Bedrooms,Barnet,150,2019
+Room,Bexley,10,2019
+Studio,Bexley,30,2019
+One Bedroom,Bexley,140,2019
+Two Bedrooms,Bexley,290,2019
+Three Bedrooms,Bexley,170,2019
+Four or More Bedrooms,Bexley,70,2019
+Room,Brent,50,2019
+Studio,Brent,90,2019
+One Bedroom,Brent,210,2019
+Two Bedrooms,Brent,420,2019
+Three Bedrooms,Brent,330,2019
+Four or More Bedrooms,Brent,170,2019
+Room,Bromley,20,2019
+Studio,Bromley,70,2019
+One Bedroom,Bromley,660,2019
+Two Bedrooms,Bromley,"1,160",2019
+Three Bedrooms,Bromley,560,2019
+Four or More Bedrooms,Bromley,330,2019
+Room,Camden,70,2019
+Studio,Camden,40,2019
+One Bedroom,Camden,190,2019
+Two Bedrooms,Camden,220,2019
+Three Bedrooms,Camden,90,2019
+Four or More Bedrooms,Camden,40,2019
+Room,City of London,0,2019
+Studio,City of London,10,2019
+One Bedroom,City of London,20,2019
+Two Bedrooms,City of London,20,2019
+Three Bedrooms,City of London,-,2019
+Four or More Bedrooms,City of London,-,2019
+Room,Croydon,120,2019
+Studio,Croydon,160,2019
+One Bedroom,Croydon,780,2019
+Two Bedrooms,Croydon,940,2019
+Three Bedrooms,Croydon,340,2019
+Four or More Bedrooms,Croydon,150,2019
+Room,Ealing,40,2019
+Studio,Ealing,70,2019
+One Bedroom,Ealing,340,2019
+Two Bedrooms,Ealing,480,2019
+Three Bedrooms,Ealing,210,2019
+Four or More Bedrooms,Ealing,140,2019
+Room,Enfield,40,2019
+Studio,Enfield,70,2019
+One Bedroom,Enfield,180,2019
+Two Bedrooms,Enfield,320,2019
+Three Bedrooms,Enfield,140,2019
+Four or More Bedrooms,Enfield,70,2019
+Room,Greenwich,30,2019
+Studio,Greenwich,60,2019
+One Bedroom,Greenwich,450,2019
+Two Bedrooms,Greenwich,770,2019
+Three Bedrooms,Greenwich,340,2019
+Four or More Bedrooms,Greenwich,110,2019
+Room,Hackney,30,2019
+Studio,Hackney,60,2019
+One Bedroom,Hackney,400,2019
+Two Bedrooms,Hackney,460,2019
+Three Bedrooms,Hackney,170,2019
+Four or More Bedrooms,Hackney,40,2019
+Room,Hammersmith and Fulham,20,2019
+Studio,Hammersmith and Fulham,100,2019
+One Bedroom,Hammersmith and Fulham,650,2019
+Two Bedrooms,Hammersmith and Fulham,580,2019
+Three Bedrooms,Hammersmith and Fulham,200,2019
+Four or More Bedrooms,Hammersmith and Fulham,170,2019
+Room,Haringey,40,2019
+Studio,Haringey,110,2019
+One Bedroom,Haringey,310,2019
+Two Bedrooms,Haringey,470,2019
+Three Bedrooms,Haringey,170,2019
+Four or More Bedrooms,Haringey,100,2019
+Room,Harrow,40,2019
+Studio,Harrow,70,2019
+One Bedroom,Harrow,190,2019
+Two Bedrooms,Harrow,320,2019
+Three Bedrooms,Harrow,330,2019
+Four or More Bedrooms,Harrow,120,2019
+Room,Havering,30,2019
+Studio,Havering,10,2019
+One Bedroom,Havering,210,2019
+Two Bedrooms,Havering,370,2019
+Three Bedrooms,Havering,310,2019
+Four or More Bedrooms,Havering,60,2019
+Room,Hillingdon,80,2019
+Studio,Hillingdon,70,2019
+One Bedroom,Hillingdon,160,2019
+Two Bedrooms,Hillingdon,280,2019
+Three Bedrooms,Hillingdon,190,2019
+Four or More Bedrooms,Hillingdon,90,2019
+Room,Hounslow,30,2019
+Studio,Hounslow,60,2019
+One Bedroom,Hounslow,290,2019
+Two Bedrooms,Hounslow,440,2019
+Three Bedrooms,Hounslow,170,2019
+Four or More Bedrooms,Hounslow,90,2019
+Room,Islington,20,2019
+Studio,Islington,30,2019
+One Bedroom,Islington,200,2019
+Two Bedrooms,Islington,220,2019
+Three Bedrooms,Islington,60,2019
+Four or More Bedrooms,Islington,30,2019
+Room,Kensington and Chelsea,30,2019
+Studio,Kensington and Chelsea,210,2019
+One Bedroom,Kensington and Chelsea,780,2019
+Two Bedrooms,Kensington and Chelsea,890,2019
+Three Bedrooms,Kensington and Chelsea,200,2019
+Four or More Bedrooms,Kensington and Chelsea,110,2019
+Room,Kingston upon Thames,90,2019
+Studio,Kingston upon Thames,50,2019
+One Bedroom,Kingston upon Thames,300,2019
+Two Bedrooms,Kingston upon Thames,500,2019
+Three Bedrooms,Kingston upon Thames,160,2019
+Four or More Bedrooms,Kingston upon Thames,80,2019
+Room,Lambeth,10,2019
+Studio,Lambeth,60,2019
+One Bedroom,Lambeth,380,2019
+Two Bedrooms,Lambeth,570,2019
+Three Bedrooms,Lambeth,210,2019
+Four or More Bedrooms,Lambeth,90,2019
+Room,Lewisham,150,2019
+Studio,Lewisham,130,2019
+One Bedroom,Lewisham,690,2019
+Two Bedrooms,Lewisham,930,2019
+Three Bedrooms,Lewisham,380,2019
+Four or More Bedrooms,Lewisham,140,2019
+Room,Merton,20,2019
+Studio,Merton,20,2019
+One Bedroom,Merton,270,2019
+Two Bedrooms,Merton,380,2019
+Three Bedrooms,Merton,150,2019
+Four or More Bedrooms,Merton,120,2019
+Room,Newham,80,2019
+Studio,Newham,30,2019
+One Bedroom,Newham,420,2019
+Two Bedrooms,Newham,640,2019
+Three Bedrooms,Newham,320,2019
+Four or More Bedrooms,Newham,140,2019
+Room,Redbridge,60,2019
+Studio,Redbridge,50,2019
+One Bedroom,Redbridge,430,2019
+Two Bedrooms,Redbridge,680,2019
+Three Bedrooms,Redbridge,370,2019
+Four or More Bedrooms,Redbridge,160,2019
+Room,Richmond upon Thames,-,2019
+Studio,Richmond upon Thames,70,2019
+One Bedroom,Richmond upon Thames,370,2019
+Two Bedrooms,Richmond upon Thames,640,2019
+Three Bedrooms,Richmond upon Thames,280,2019
+Four or More Bedrooms,Richmond upon Thames,190,2019
+Room,Southwark,40,2019
+Studio,Southwark,60,2019
+One Bedroom,Southwark,660,2019
+Two Bedrooms,Southwark,870,2019
+Three Bedrooms,Southwark,240,2019
+Four or More Bedrooms,Southwark,100,2019
+Room,Sutton,20,2019
+Studio,Sutton,50,2019
+One Bedroom,Sutton,360,2019
+Two Bedrooms,Sutton,410,2019
+Three Bedrooms,Sutton,130,2019
+Four or More Bedrooms,Sutton,70,2019
+Room,Tower Hamlets,60,2019
+Studio,Tower Hamlets,110,2019
+One Bedroom,Tower Hamlets,520,2019
+Two Bedrooms,Tower Hamlets,610,2019
+Three Bedrooms,Tower Hamlets,230,2019
+Four or More Bedrooms,Tower Hamlets,70,2019
+Room,Waltham Forest,70,2019
+Studio,Waltham Forest,70,2019
+One Bedroom,Waltham Forest,460,2019
+Two Bedrooms,Waltham Forest,720,2019
+Three Bedrooms,Waltham Forest,310,2019
+Four or More Bedrooms,Waltham Forest,140,2019
+Room,Wandsworth,10,2019
+Studio,Wandsworth,50,2019
+One Bedroom,Wandsworth,670,2019
+Two Bedrooms,Wandsworth,"1,160",2019
+Three Bedrooms,Wandsworth,440,2019
+Four or More Bedrooms,Wandsworth,300,2019
+Room,Westminster,10,2019
+Studio,Westminster,100,2019
+One Bedroom,Westminster,510,2019
+Two Bedrooms,Westminster,560,2019
+Three Bedrooms,Westminster,200,2019
+Four or More Bedrooms,Westminster,50,2019
+Room,Barking and Dagenham,20,2020
+Studio,Barking and Dagenham,10,2020
+One Bedroom,Barking and Dagenham,150,2020
+Two Bedrooms,Barking and Dagenham,220,2020
+Three Bedrooms,Barking and Dagenham,150,2020
+Four or More Bedrooms,Barking and Dagenham,30,2020
+Room,Barnet,-,2020
+Studio,Barnet,60,2020
+One Bedroom,Barnet,380,2020
+Two Bedrooms,Barnet,770,2020
+Three Bedrooms,Barnet,260,2020
+Four or More Bedrooms,Barnet,110,2020
+Room,Bexley,10,2020
+Studio,Bexley,30,2020
+One Bedroom,Bexley,190,2020
+Two Bedrooms,Bexley,340,2020
+Three Bedrooms,Bexley,200,2020
+Four or More Bedrooms,Bexley,80,2020
+Room,Brent,60,2020
+Studio,Brent,120,2020
+One Bedroom,Brent,250,2020
+Two Bedrooms,Brent,440,2020
+Three Bedrooms,Brent,260,2020
+Four or More Bedrooms,Brent,150,2020
+Room,Bromley,10,2020
+Studio,Bromley,50,2020
+One Bedroom,Bromley,510,2020
+Two Bedrooms,Bromley,810,2020
+Three Bedrooms,Bromley,340,2020
+Four or More Bedrooms,Bromley,180,2020
+Room,Camden,10,2020
+Studio,Camden,120,2020
+One Bedroom,Camden,300,2020
+Two Bedrooms,Camden,240,2020
+Three Bedrooms,Camden,90,2020
+Four or More Bedrooms,Camden,40,2020
+Room,City of London,0,2020
+Studio,City of London,-,2020
+One Bedroom,City of London,10,2020
+Two Bedrooms,City of London,-,2020
+Three Bedrooms,City of London,-,2020
+Four or More Bedrooms,City of London,0,2020
+Room,Croydon,80,2020
+Studio,Croydon,80,2020
+One Bedroom,Croydon,540,2020
+Two Bedrooms,Croydon,650,2020
+Three Bedrooms,Croydon,250,2020
+Four or More Bedrooms,Croydon,100,2020
+Room,Ealing,110,2020
+Studio,Ealing,110,2020
+One Bedroom,Ealing,660,2020
+Two Bedrooms,Ealing,880,2020
+Three Bedrooms,Ealing,360,2020
+Four or More Bedrooms,Ealing,210,2020
+Room,Enfield,-,2020
+Studio,Enfield,40,2020
+One Bedroom,Enfield,210,2020
+Two Bedrooms,Enfield,340,2020
+Three Bedrooms,Enfield,170,2020
+Four or More Bedrooms,Enfield,60,2020
+Room,Greenwich,30,2020
+Studio,Greenwich,30,2020
+One Bedroom,Greenwich,250,2020
+Two Bedrooms,Greenwich,430,2020
+Three Bedrooms,Greenwich,200,2020
+Four or More Bedrooms,Greenwich,50,2020
+Room,Hackney,-,2020
+Studio,Hackney,60,2020
+One Bedroom,Hackney,460,2020
+Two Bedrooms,Hackney,580,2020
+Three Bedrooms,Hackney,210,2020
+Four or More Bedrooms,Hackney,120,2020
+Room,Hammersmith and Fulham,10,2020
+Studio,Hammersmith and Fulham,110,2020
+One Bedroom,Hammersmith and Fulham,600,2020
+Two Bedrooms,Hammersmith and Fulham,580,2020
+Three Bedrooms,Hammersmith and Fulham,230,2020
+Four or More Bedrooms,Hammersmith and Fulham,150,2020
+Room,Haringey,10,2020
+Studio,Haringey,20,2020
+One Bedroom,Haringey,140,2020
+Two Bedrooms,Haringey,190,2020
+Three Bedrooms,Haringey,70,2020
+Four or More Bedrooms,Haringey,60,2020
+Room,Harrow,10,2020
+Studio,Harrow,60,2020
+One Bedroom,Harrow,190,2020
+Two Bedrooms,Harrow,380,2020
+Three Bedrooms,Harrow,280,2020
+Four or More Bedrooms,Harrow,110,2020
+Room,Havering,20,2020
+Studio,Havering,10,2020
+One Bedroom,Havering,200,2020
+Two Bedrooms,Havering,320,2020
+Three Bedrooms,Havering,280,2020
+Four or More Bedrooms,Havering,60,2020
+Room,Hillingdon,40,2020
+Studio,Hillingdon,130,2020
+One Bedroom,Hillingdon,510,2020
+Two Bedrooms,Hillingdon,750,2020
+Three Bedrooms,Hillingdon,290,2020
+Four or More Bedrooms,Hillingdon,140,2020
+Room,Hounslow,70,2020
+Studio,Hounslow,110,2020
+One Bedroom,Hounslow,440,2020
+Two Bedrooms,Hounslow,670,2020
+Three Bedrooms,Hounslow,350,2020
+Four or More Bedrooms,Hounslow,140,2020
+Room,Islington,-,2020
+Studio,Islington,10,2020
+One Bedroom,Islington,160,2020
+Two Bedrooms,Islington,170,2020
+Three Bedrooms,Islington,40,2020
+Four or More Bedrooms,Islington,20,2020
+Room,Kensington and Chelsea,-,2020
+Studio,Kensington and Chelsea,140,2020
+One Bedroom,Kensington and Chelsea,540,2020
+Two Bedrooms,Kensington and Chelsea,680,2020
+Three Bedrooms,Kensington and Chelsea,210,2020
+Four or More Bedrooms,Kensington and Chelsea,80,2020
+Room,Kingston upon Thames,110,2020
+Studio,Kingston upon Thames,20,2020
+One Bedroom,Kingston upon Thames,190,2020
+Two Bedrooms,Kingston upon Thames,270,2020
+Three Bedrooms,Kingston upon Thames,150,2020
+Four or More Bedrooms,Kingston upon Thames,70,2020
+Room,Lambeth,10,2020
+Studio,Lambeth,40,2020
+One Bedroom,Lambeth,350,2020
+Two Bedrooms,Lambeth,600,2020
+Three Bedrooms,Lambeth,210,2020
+Four or More Bedrooms,Lambeth,100,2020
+Room,Lewisham,40,2020
+Studio,Lewisham,90,2020
+One Bedroom,Lewisham,460,2020
+Two Bedrooms,Lewisham,530,2020
+Three Bedrooms,Lewisham,170,2020
+Four or More Bedrooms,Lewisham,40,2020
+Room,Merton,10,2020
+Studio,Merton,40,2020
+One Bedroom,Merton,430,2020
+Two Bedrooms,Merton,620,2020
+Three Bedrooms,Merton,250,2020
+Four or More Bedrooms,Merton,190,2020
+Room,Newham,30,2020
+Studio,Newham,60,2020
+One Bedroom,Newham,390,2020
+Two Bedrooms,Newham,560,2020
+Three Bedrooms,Newham,300,2020
+Four or More Bedrooms,Newham,100,2020
+Room,Redbridge,40,2020
+Studio,Redbridge,50,2020
+One Bedroom,Redbridge,280,2020
+Two Bedrooms,Redbridge,450,2020
+Three Bedrooms,Redbridge,240,2020
+Four or More Bedrooms,Redbridge,80,2020
+Room,Richmond upon Thames,-,2020
+Studio,Richmond upon Thames,50,2020
+One Bedroom,Richmond upon Thames,400,2020
+Two Bedrooms,Richmond upon Thames,810,2020
+Three Bedrooms,Richmond upon Thames,340,2020
+Four or More Bedrooms,Richmond upon Thames,210,2020
+Room,Southwark,20,2020
+Studio,Southwark,40,2020
+One Bedroom,Southwark,420,2020
+Two Bedrooms,Southwark,510,2020
+Three Bedrooms,Southwark,170,2020
+Four or More Bedrooms,Southwark,60,2020
+Room,Sutton,10,2020
+Studio,Sutton,50,2020
+One Bedroom,Sutton,410,2020
+Two Bedrooms,Sutton,560,2020
+Three Bedrooms,Sutton,170,2020
+Four or More Bedrooms,Sutton,50,2020
+Room,Tower Hamlets,40,2020
+Studio,Tower Hamlets,130,2020
+One Bedroom,Tower Hamlets,570,2020
+Two Bedrooms,Tower Hamlets,700,2020
+Three Bedrooms,Tower Hamlets,230,2020
+Four or More Bedrooms,Tower Hamlets,60,2020
+Room,Waltham Forest,20,2020
+Studio,Waltham Forest,40,2020
+One Bedroom,Waltham Forest,390,2020
+Two Bedrooms,Waltham Forest,520,2020
+Three Bedrooms,Waltham Forest,210,2020
+Four or More Bedrooms,Waltham Forest,90,2020
+Room,Wandsworth,-,2020
+Studio,Wandsworth,50,2020
+One Bedroom,Wandsworth,450,2020
+Two Bedrooms,Wandsworth,810,2020
+Three Bedrooms,Wandsworth,330,2020
+Four or More Bedrooms,Wandsworth,210,2020
+Room,Westminster,10,2020
+Studio,Westminster,220,2020
+One Bedroom,Westminster,510,2020
+Two Bedrooms,Westminster,550,2020
+Three Bedrooms,Westminster,180,2020
+Four or More Bedrooms,Westminster,40,2020
+Room,Barking and Dagenham,10,2021
+Studio,Barking and Dagenham,10,2021
+One Bedroom,Barking and Dagenham,230,2021
+Two Bedrooms,Barking and Dagenham,400,2021
+Three Bedrooms,Barking and Dagenham,250,2021
+Four or More Bedrooms,Barking and Dagenham,40,2021
+Room,Barnet,20,2021
+Studio,Barnet,140,2021
+One Bedroom,Barnet,590,2021
+Two Bedrooms,Barnet,"1,160",2021
+Three Bedrooms,Barnet,360,2021
+Four or More Bedrooms,Barnet,170,2021
+Room,Bexley,10,2021
+Studio,Bexley,20,2021
+One Bedroom,Bexley,190,2021
+Two Bedrooms,Bexley,350,2021
+Three Bedrooms,Bexley,230,2021
+Four or More Bedrooms,Bexley,70,2021
+Room,Brent,60,2021
+Studio,Brent,120,2021
+One Bedroom,Brent,330,2021
+Two Bedrooms,Brent,560,2021
+Three Bedrooms,Brent,420,2021
+Four or More Bedrooms,Brent,180,2021
+Room,Bromley,10,2021
+Studio,Bromley,50,2021
+One Bedroom,Bromley,670,2021
+Two Bedrooms,Bromley,"1,020",2021
+Three Bedrooms,Bromley,430,2021
+Four or More Bedrooms,Bromley,200,2021
+Room,Camden,-,2021
+Studio,Camden,140,2021
+One Bedroom,Camden,320,2021
+Two Bedrooms,Camden,300,2021
+Three Bedrooms,Camden,120,2021
+Four or More Bedrooms,Camden,50,2021
+Room,City of London,0,2021
+Studio,City of London,40,2021
+One Bedroom,City of London,90,2021
+Two Bedrooms,City of London,50,2021
+Three Bedrooms,City of London,10,2021
+Four or More Bedrooms,City of London,-,2021
+Room,Croydon,30,2021
+Studio,Croydon,100,2021
+One Bedroom,Croydon,690,2021
+Two Bedrooms,Croydon,990,2021
+Three Bedrooms,Croydon,350,2021
+Four or More Bedrooms,Croydon,160,2021
+Room,Ealing,90,2021
+Studio,Ealing,150,2021
+One Bedroom,Ealing,560,2021
+Two Bedrooms,Ealing,780,2021
+Three Bedrooms,Ealing,350,2021
+Four or More Bedrooms,Ealing,190,2021
+Room,Enfield,20,2021
+Studio,Enfield,60,2021
+One Bedroom,Enfield,240,2021
+Two Bedrooms,Enfield,370,2021
+Three Bedrooms,Enfield,230,2021
+Four or More Bedrooms,Enfield,60,2021
+Room,Greenwich,40,2021
+Studio,Greenwich,40,2021
+One Bedroom,Greenwich,570,2021
+Two Bedrooms,Greenwich,910,2021
+Three Bedrooms,Greenwich,340,2021
+Four or More Bedrooms,Greenwich,90,2021
+Room,Hackney,20,2021
+Studio,Hackney,80,2021
+One Bedroom,Hackney,420,2021
+Two Bedrooms,Hackney,490,2021
+Three Bedrooms,Hackney,210,2021
+Four or More Bedrooms,Hackney,70,2021
+Room,Hammersmith and Fulham,-,2021
+Studio,Hammersmith and Fulham,140,2021
+One Bedroom,Hammersmith and Fulham,880,2021
+Two Bedrooms,Hammersmith and Fulham,910,2021
+Three Bedrooms,Hammersmith and Fulham,300,2021
+Four or More Bedrooms,Hammersmith and Fulham,220,2021
+Room,Haringey,60,2021
+Studio,Haringey,160,2021
+One Bedroom,Haringey,560,2021
+Two Bedrooms,Haringey,670,2021
+Three Bedrooms,Haringey,230,2021
+Four or More Bedrooms,Haringey,210,2021
+Room,Harrow,40,2021
+Studio,Harrow,70,2021
+One Bedroom,Harrow,390,2021
+Two Bedrooms,Harrow,700,2021
+Three Bedrooms,Harrow,550,2021
+Four or More Bedrooms,Harrow,190,2021
+Room,Havering,10,2021
+Studio,Havering,20,2021
+One Bedroom,Havering,270,2021
+Two Bedrooms,Havering,480,2021
+Three Bedrooms,Havering,380,2021
+Four or More Bedrooms,Havering,80,2021
+Room,Hillingdon,30,2021
+Studio,Hillingdon,100,2021
+One Bedroom,Hillingdon,310,2021
+Two Bedrooms,Hillingdon,420,2021
+Three Bedrooms,Hillingdon,260,2021
+Four or More Bedrooms,Hillingdon,120,2021
+Room,Hounslow,60,2021
+Studio,Hounslow,90,2021
+One Bedroom,Hounslow,490,2021
+Two Bedrooms,Hounslow,740,2021
+Three Bedrooms,Hounslow,360,2021
+Four or More Bedrooms,Hounslow,120,2021
+Room,Islington,50,2021
+Studio,Islington,110,2021
+One Bedroom,Islington,900,2021
+Two Bedrooms,Islington,740,2021
+Three Bedrooms,Islington,310,2021
+Four or More Bedrooms,Islington,140,2021
+Room,Kensington and Chelsea,-,2021
+Studio,Kensington and Chelsea,290,2021
+One Bedroom,Kensington and Chelsea,900,2021
+Two Bedrooms,Kensington and Chelsea,"1,040",2021
+Three Bedrooms,Kensington and Chelsea,310,2021
+Four or More Bedrooms,Kensington and Chelsea,110,2021
+Room,Kingston upon Thames,10,2021
+Studio,Kingston upon Thames,40,2021
+One Bedroom,Kingston upon Thames,420,2021
+Two Bedrooms,Kingston upon Thames,600,2021
+Three Bedrooms,Kingston upon Thames,290,2021
+Four or More Bedrooms,Kingston upon Thames,140,2021
+Room,Lambeth,10,2021
+Studio,Lambeth,50,2021
+One Bedroom,Lambeth,610,2021
+Two Bedrooms,Lambeth,940,2021
+Three Bedrooms,Lambeth,340,2021
+Four or More Bedrooms,Lambeth,150,2021
+Room,Lewisham,70,2021
+Studio,Lewisham,110,2021
+One Bedroom,Lewisham,730,2021
+Two Bedrooms,Lewisham,920,2021
+Three Bedrooms,Lewisham,330,2021
+Four or More Bedrooms,Lewisham,100,2021
+Room,Merton,10,2021
+Studio,Merton,40,2021
+One Bedroom,Merton,380,2021
+Two Bedrooms,Merton,550,2021
+Three Bedrooms,Merton,230,2021
+Four or More Bedrooms,Merton,120,2021
+Room,Newham,30,2021
+Studio,Newham,70,2021
+One Bedroom,Newham,860,2021
+Two Bedrooms,Newham,900,2021
+Three Bedrooms,Newham,380,2021
+Four or More Bedrooms,Newham,90,2021
+Room,Redbridge,60,2021
+Studio,Redbridge,40,2021
+One Bedroom,Redbridge,410,2021
+Two Bedrooms,Redbridge,630,2021
+Three Bedrooms,Redbridge,320,2021
+Four or More Bedrooms,Redbridge,110,2021
+Room,Richmond upon Thames,10,2021
+Studio,Richmond upon Thames,80,2021
+One Bedroom,Richmond upon Thames,650,2021
+Two Bedrooms,Richmond upon Thames,"1,060",2021
+Three Bedrooms,Richmond upon Thames,440,2021
+Four or More Bedrooms,Richmond upon Thames,240,2021
+Room,Southwark,20,2021
+Studio,Southwark,60,2021
+One Bedroom,Southwark,860,2021
+Two Bedrooms,Southwark,"1,080",2021
+Three Bedrooms,Southwark,370,2021
+Four or More Bedrooms,Southwark,150,2021
+Room,Sutton,10,2021
+Studio,Sutton,50,2021
+One Bedroom,Sutton,420,2021
+Two Bedrooms,Sutton,570,2021
+Three Bedrooms,Sutton,160,2021
+Four or More Bedrooms,Sutton,50,2021
+Room,Tower Hamlets,30,2021
+Studio,Tower Hamlets,80,2021
+One Bedroom,Tower Hamlets,660,2021
+Two Bedrooms,Tower Hamlets,740,2021
+Three Bedrooms,Tower Hamlets,250,2021
+Four or More Bedrooms,Tower Hamlets,60,2021
+Room,Waltham Forest,30,2021
+Studio,Waltham Forest,50,2021
+One Bedroom,Waltham Forest,470,2021
+Two Bedrooms,Waltham Forest,630,2021
+Three Bedrooms,Waltham Forest,280,2021
+Four or More Bedrooms,Waltham Forest,100,2021
+Room,Wandsworth,10,2021
+Studio,Wandsworth,110,2021
+One Bedroom,Wandsworth,780,2021
+Two Bedrooms,Wandsworth,"1,410",2021
+Three Bedrooms,Wandsworth,530,2021
+Four or More Bedrooms,Wandsworth,350,2021
+Room,Westminster,20,2021
+Studio,Westminster,160,2021
+One Bedroom,Westminster,510,2021
+Two Bedrooms,Westminster,590,2021
+Three Bedrooms,Westminster,180,2021
+Four or More Bedrooms,Westminster,40,2021
+Room,Barking and Dagenham,10,2022
+Studio,Barking and Dagenham,10,2022
+One Bedroom,Barking and Dagenham,240,2022
+Two Bedrooms,Barking and Dagenham,430,2022
+Three Bedrooms,Barking and Dagenham,270,2022
+Four or More Bedrooms,Barking and Dagenham,40,2022
+Room,Barnet,20,2022
+Studio,Barnet,160,2022
+One Bedroom,Barnet,730,2022
+Two Bedrooms,Barnet,"1,340",2022
+Three Bedrooms,Barnet,450,2022
+Four or More Bedrooms,Barnet,230,2022
+Room,Bexley,10,2022
+Studio,Bexley,20,2022
+One Bedroom,Bexley,220,2022
+Two Bedrooms,Bexley,390,2022
+Three Bedrooms,Bexley,300,2022
+Four or More Bedrooms,Bexley,90,2022
+Room,Brent,30,2022
+Studio,Brent,80,2022
+One Bedroom,Brent,260,2022
+Two Bedrooms,Brent,420,2022
+Three Bedrooms,Brent,310,2022
+Four or More Bedrooms,Brent,100,2022
+Room,Bromley,-,2022
+Studio,Bromley,40,2022
+One Bedroom,Bromley,770,2022
+Two Bedrooms,Bromley,"1,060",2022
+Three Bedrooms,Bromley,450,2022
+Four or More Bedrooms,Bromley,190,2022
+Room,Camden,-,2022
+Studio,Camden,220,2022
+One Bedroom,Camden,520,2022
+Two Bedrooms,Camden,580,2022
+Three Bedrooms,Camden,230,2022
+Four or More Bedrooms,Camden,90,2022
+Room,City of London,0,2022
+Studio,City of London,30,2022
+One Bedroom,City of London,50,2022
+Two Bedrooms,City of London,10,2022
+Three Bedrooms,City of London,-,2022
+Four or More Bedrooms,City of London,0,2022
+Room,Croydon,30,2022
+Studio,Croydon,70,2022
+One Bedroom,Croydon,460,2022
+Two Bedrooms,Croydon,650,2022
+Three Bedrooms,Croydon,260,2022
+Four or More Bedrooms,Croydon,110,2022
+Room,Ealing,50,2022
+Studio,Ealing,130,2022
+One Bedroom,Ealing,650,2022
+Two Bedrooms,Ealing,940,2022
+Three Bedrooms,Ealing,350,2022
+Four or More Bedrooms,Ealing,200,2022
+Room,Enfield,10,2022
+Studio,Enfield,40,2022
+One Bedroom,Enfield,210,2022
+Two Bedrooms,Enfield,400,2022
+Three Bedrooms,Enfield,220,2022
+Four or More Bedrooms,Enfield,70,2022
+Room,Greenwich,30,2022
+Studio,Greenwich,40,2022
+One Bedroom,Greenwich,440,2022
+Two Bedrooms,Greenwich,790,2022
+Three Bedrooms,Greenwich,380,2022
+Four or More Bedrooms,Greenwich,110,2022
+Room,Hackney,-,2022
+Studio,Hackney,50,2022
+One Bedroom,Hackney,370,2022
+Two Bedrooms,Hackney,460,2022
+Three Bedrooms,Hackney,200,2022
+Four or More Bedrooms,Hackney,70,2022
+Room,Hammersmith and Fulham,-,2022
+Studio,Hammersmith and Fulham,100,2022
+One Bedroom,Hammersmith and Fulham,500,2022
+Two Bedrooms,Hammersmith and Fulham,550,2022
+Three Bedrooms,Hammersmith and Fulham,170,2022
+Four or More Bedrooms,Hammersmith and Fulham,150,2022
+Room,Haringey,100,2022
+Studio,Haringey,90,2022
+One Bedroom,Haringey,450,2022
+Two Bedrooms,Haringey,590,2022
+Three Bedrooms,Haringey,200,2022
+Four or More Bedrooms,Haringey,170,2022
+Room,Harrow,10,2022
+Studio,Harrow,40,2022
+One Bedroom,Harrow,370,2022
+Two Bedrooms,Harrow,750,2022
+Three Bedrooms,Harrow,520,2022
+Four or More Bedrooms,Harrow,170,2022
+Room,Havering,10,2022
+Studio,Havering,20,2022
+One Bedroom,Havering,170,2022
+Two Bedrooms,Havering,270,2022
+Three Bedrooms,Havering,260,2022
+Four or More Bedrooms,Havering,50,2022
+Room,Hillingdon,170,2022
+Studio,Hillingdon,100,2022
+One Bedroom,Hillingdon,710,2022
+Two Bedrooms,Hillingdon,"1,090",2022
+Three Bedrooms,Hillingdon,670,2022
+Four or More Bedrooms,Hillingdon,230,2022
+Room,Hounslow,50,2022
+Studio,Hounslow,80,2022
+One Bedroom,Hounslow,510,2022
+Two Bedrooms,Hounslow,710,2022
+Three Bedrooms,Hounslow,350,2022
+Four or More Bedrooms,Hounslow,110,2022
+Room,Islington,30,2022
+Studio,Islington,70,2022
+One Bedroom,Islington,540,2022
+Two Bedrooms,Islington,420,2022
+Three Bedrooms,Islington,210,2022
+Four or More Bedrooms,Islington,80,2022
+Room,Kensington and Chelsea,30,2022
+Studio,Kensington and Chelsea,330,2022
+One Bedroom,Kensington and Chelsea,990,2022
+Two Bedrooms,Kensington and Chelsea,"1,050",2022
+Three Bedrooms,Kensington and Chelsea,330,2022
+Four or More Bedrooms,Kensington and Chelsea,110,2022
+Room,Kingston upon Thames,60,2022
+Studio,Kingston upon Thames,10,2022
+One Bedroom,Kingston upon Thames,210,2022
+Two Bedrooms,Kingston upon Thames,340,2022
+Three Bedrooms,Kingston upon Thames,130,2022
+Four or More Bedrooms,Kingston upon Thames,60,2022
+Room,Lambeth,30,2022
+Studio,Lambeth,90,2022
+One Bedroom,Lambeth,570,2022
+Two Bedrooms,Lambeth,800,2022
+Three Bedrooms,Lambeth,280,2022
+Four or More Bedrooms,Lambeth,120,2022
+Room,Lewisham,70,2022
+Studio,Lewisham,80,2022
+One Bedroom,Lewisham,550,2022
+Two Bedrooms,Lewisham,730,2022
+Three Bedrooms,Lewisham,270,2022
+Four or More Bedrooms,Lewisham,100,2022
+Room,Merton,10,2022
+Studio,Merton,20,2022
+One Bedroom,Merton,230,2022
+Two Bedrooms,Merton,460,2022
+Three Bedrooms,Merton,210,2022
+Four or More Bedrooms,Merton,100,2022
+Room,Newham,60,2022
+Studio,Newham,70,2022
+One Bedroom,Newham,"1,090",2022
+Two Bedrooms,Newham,"1,180",2022
+Three Bedrooms,Newham,460,2022
+Four or More Bedrooms,Newham,110,2022
+Room,Redbridge,40,2022
+Studio,Redbridge,40,2022
+One Bedroom,Redbridge,410,2022
+Two Bedrooms,Redbridge,620,2022
+Three Bedrooms,Redbridge,360,2022
+Four or More Bedrooms,Redbridge,130,2022
+Room,Richmond upon Thames,10,2022
+Studio,Richmond upon Thames,50,2022
+One Bedroom,Richmond upon Thames,440,2022
+Two Bedrooms,Richmond upon Thames,690,2022
+Three Bedrooms,Richmond upon Thames,280,2022
+Four or More Bedrooms,Richmond upon Thames,130,2022
+Room,Southwark,10,2022
+Studio,Southwark,70,2022
+One Bedroom,Southwark,960,2022
+Two Bedrooms,Southwark,"1,260",2022
+Three Bedrooms,Southwark,410,2022
+Four or More Bedrooms,Southwark,180,2022
+Room,Sutton,-,2022
+Studio,Sutton,70,2022
+One Bedroom,Sutton,410,2022
+Two Bedrooms,Sutton,530,2022
+Three Bedrooms,Sutton,170,2022
+Four or More Bedrooms,Sutton,40,2022
+Room,Tower Hamlets,30,2022
+Studio,Tower Hamlets,80,2022
+One Bedroom,Tower Hamlets,500,2022
+Two Bedrooms,Tower Hamlets,580,2022
+Three Bedrooms,Tower Hamlets,200,2022
+Four or More Bedrooms,Tower Hamlets,40,2022
+Room,Waltham Forest,30,2022
+Studio,Waltham Forest,30,2022
+One Bedroom,Waltham Forest,480,2022
+Two Bedrooms,Waltham Forest,670,2022
+Three Bedrooms,Waltham Forest,320,2022
+Four or More Bedrooms,Waltham Forest,90,2022
+Room,Wandsworth,40,2022
+Studio,Wandsworth,50,2022
+One Bedroom,Wandsworth,560,2022
+Two Bedrooms,Wandsworth,970,2022
+Three Bedrooms,Wandsworth,360,2022
+Four or More Bedrooms,Wandsworth,220,2022
+Room,Westminster,60,2022
+Studio,Westminster,90,2022
+One Bedroom,Westminster,430,2022
+Two Bedrooms,Westminster,380,2022
+Three Bedrooms,Westminster,130,2022
+Four or More Bedrooms,Westminster,30,2022
+Room,Barking and Dagenham,10,2023
+Studio,Barking and Dagenham,10,2023
+One Bedroom,Barking and Dagenham,200,2023
+Two Bedrooms,Barking and Dagenham,360,2023
+Three Bedrooms,Barking and Dagenham,230,2023
+Four or More Bedrooms,Barking and Dagenham,30,2023
+Room,Barnet,30,2023
+Studio,Barnet,110,2023
+One Bedroom,Barnet,580,2023
+Two Bedrooms,Barnet,950,2023
+Three Bedrooms,Barnet,320,2023
+Four or More Bedrooms,Barnet,160,2023
+Room,Bexley, - ,2023
+Studio,Bexley,10,2023
+One Bedroom,Bexley,80,2023
+Two Bedrooms,Bexley,150,2023
+Three Bedrooms,Bexley,150,2023
+Four or More Bedrooms,Bexley,60,2023
+Room,Brent,50,2023
+Studio,Brent,50,2023
+One Bedroom,Brent,140,2023
+Two Bedrooms,Brent,220,2023
+Three Bedrooms,Brent,170,2023
+Four or More Bedrooms,Brent,70,2023
+Room,Bromley,10,2023
+Studio,Bromley,30,2023
+One Bedroom,Bromley,770,2023
+Two Bedrooms,Bromley,"1,130",2023
+Three Bedrooms,Bromley,440,2023
+Four or More Bedrooms,Bromley,190,2023
+Room,Camden,10,2023
+Studio,Camden,190,2023
+One Bedroom,Camden,520,2023
+Two Bedrooms,Camden,560,2023
+Three Bedrooms,Camden,230,2023
+Four or More Bedrooms,Camden,60,2023
+Room,City of London, - ,2023
+Studio,City of London,20,2023
+One Bedroom,City of London,50,2023
+Two Bedrooms,City of London,20,2023
+Three Bedrooms,City of London, - ,2023
+Four or More Bedrooms,City of London, - ,2023
+Room,Croydon,70,2023
+Studio,Croydon,230,2023
+One Bedroom,Croydon,600,2023
+Two Bedrooms,Croydon,770,2023
+Three Bedrooms,Croydon,300,2023
+Four or More Bedrooms,Croydon,120,2023
+Room,Ealing,10,2023
+Studio,Ealing,60,2023
+One Bedroom,Ealing,490,2023
+Two Bedrooms,Ealing,760,2023
+Three Bedrooms,Ealing,230,2023
+Four or More Bedrooms,Ealing,140,2023
+Room,Enfield,20,2023
+Studio,Enfield,30,2023
+One Bedroom,Enfield,210,2023
+Two Bedrooms,Enfield,370,2023
+Three Bedrooms,Enfield,250,2023
+Four or More Bedrooms,Enfield,60,2023
+Room,Greenwich,110,2023
+Studio,Greenwich,10,2023
+One Bedroom,Greenwich,260,2023
+Two Bedrooms,Greenwich,410,2023
+Three Bedrooms,Greenwich,150,2023
+Four or More Bedrooms,Greenwich,50,2023
+Room,Hackney,20,2023
+Studio,Hackney,50,2023
+One Bedroom,Hackney,330,2023
+Two Bedrooms,Hackney,380,2023
+Three Bedrooms,Hackney,160,2023
+Four or More Bedrooms,Hackney,50,2023
+Room,Hammersmith and Fulham, - ,2023
+Studio,Hammersmith and Fulham,80,2023
+One Bedroom,Hammersmith and Fulham,460,2023
+Two Bedrooms,Hammersmith and Fulham,480,2023
+Three Bedrooms,Hammersmith and Fulham,170,2023
+Four or More Bedrooms,Hammersmith and Fulham,110,2023
+Room,Haringey,60,2023
+Studio,Haringey,80,2023
+One Bedroom,Haringey,240,2023
+Two Bedrooms,Haringey,340,2023
+Three Bedrooms,Haringey,140,2023
+Four or More Bedrooms,Haringey,100,2023
+Room,Harrow,20,2023
+Studio,Harrow,30,2023
+One Bedroom,Harrow,210,2023
+Two Bedrooms,Harrow,510,2023
+Three Bedrooms,Harrow,320,2023
+Four or More Bedrooms,Harrow,120,2023
+Room,Havering,20,2023
+Studio,Havering,10,2023
+One Bedroom,Havering,190,2023
+Two Bedrooms,Havering,320,2023
+Three Bedrooms,Havering,240,2023
+Four or More Bedrooms,Havering,50,2023
+Room,Hillingdon,40,2023
+Studio,Hillingdon,50,2023
+One Bedroom,Hillingdon,500,2023
+Two Bedrooms,Hillingdon,870,2023
+Three Bedrooms,Hillingdon,450,2023
+Four or More Bedrooms,Hillingdon,160,2023
+Room,Hounslow,90,2023
+Studio,Hounslow,120,2023
+One Bedroom,Hounslow,480,2023
+Two Bedrooms,Hounslow,640,2023
+Three Bedrooms,Hounslow,260,2023
+Four or More Bedrooms,Hounslow,100,2023
+Room,Islington,10,2023
+Studio,Islington,40,2023
+One Bedroom,Islington,490,2023
+Two Bedrooms,Islington,470,2023
+Three Bedrooms,Islington,160,2023
+Four or More Bedrooms,Islington,70,2023
+Room,Kensington and Chelsea,60,2023
+Studio,Kensington and Chelsea,390,2023
+One Bedroom,Kensington and Chelsea,930,2023
+Two Bedrooms,Kensington and Chelsea,920,2023
+Three Bedrooms,Kensington and Chelsea,300,2023
+Four or More Bedrooms,Kensington and Chelsea,120,2023
+Room,Kingston upon Thames,60,2023
+Studio,Kingston upon Thames,10,2023
+One Bedroom,Kingston upon Thames,130,2023
+Two Bedrooms,Kingston upon Thames,290,2023
+Three Bedrooms,Kingston upon Thames,120,2023
+Four or More Bedrooms,Kingston upon Thames,60,2023
+Room,Lambeth, - ,2023
+Studio,Lambeth,80,2023
+One Bedroom,Lambeth,390,2023
+Two Bedrooms,Lambeth,600,2023
+Three Bedrooms,Lambeth,210,2023
+Four or More Bedrooms,Lambeth,80,2023
+Room,Lewisham,140,2023
+Studio,Lewisham,100,2023
+One Bedroom,Lewisham,600,2023
+Two Bedrooms,Lewisham,770,2023
+Three Bedrooms,Lewisham,280,2023
+Four or More Bedrooms,Lewisham,100,2023
+Room,Merton,40,2023
+Studio,Merton,10,2023
+One Bedroom,Merton,110,2023
+Two Bedrooms,Merton,260,2023
+Three Bedrooms,Merton,120,2023
+Four or More Bedrooms,Merton,40,2023
+Room,Newham,60,2023
+Studio,Newham,40,2023
+One Bedroom,Newham,710,2023
+Two Bedrooms,Newham,860,2023
+Three Bedrooms,Newham,430,2023
+Four or More Bedrooms,Newham,110,2023
+Room,Redbridge,50,2023
+Studio,Redbridge,30,2023
+One Bedroom,Redbridge,360,2023
+Two Bedrooms,Redbridge,560,2023
+Three Bedrooms,Redbridge,310,2023
+Four or More Bedrooms,Redbridge,100,2023
+Room,Richmond upon Thames, - ,2023
+Studio,Richmond upon Thames,20,2023
+One Bedroom,Richmond upon Thames,180,2023
+Two Bedrooms,Richmond upon Thames,330,2023
+Three Bedrooms,Richmond upon Thames,160,2023
+Four or More Bedrooms,Richmond upon Thames,80,2023
+Room,Southwark,20,2023
+Studio,Southwark,40,2023
+One Bedroom,Southwark,860,2023
+Two Bedrooms,Southwark,"1,050",2023
+Three Bedrooms,Southwark,330,2023
+Four or More Bedrooms,Southwark,150,2023
+Room,Sutton, - ,2023
+Studio,Sutton,40,2023
+One Bedroom,Sutton,310,2023
+Two Bedrooms,Sutton,450,2023
+Three Bedrooms,Sutton,160,2023
+Four or More Bedrooms,Sutton,60,2023
+Room,Tower Hamlets,40,2023
+Studio,Tower Hamlets,90,2023
+One Bedroom,Tower Hamlets,560,2023
+Two Bedrooms,Tower Hamlets,620,2023
+Three Bedrooms,Tower Hamlets,200,2023
+Four or More Bedrooms,Tower Hamlets,50,2023
+Room,Waltham Forest,30,2023
+Studio,Waltham Forest,50,2023
+One Bedroom,Waltham Forest,450,2023
+Two Bedrooms,Waltham Forest,640,2023
+Three Bedrooms,Waltham Forest,290,2023
+Four or More Bedrooms,Waltham Forest,80,2023
+Room,Wandsworth,60,2023
+Studio,Wandsworth,60,2023
+One Bedroom,Wandsworth,670,2023
+Two Bedrooms,Wandsworth,930,2023
+Three Bedrooms,Wandsworth,420,2023
+Four or More Bedrooms,Wandsworth,210,2023
+Room,Westminster,50,2023
+Studio,Westminster,190,2023
+One Bedroom,Westminster,670,2023
+Two Bedrooms,Westminster,640,2023
+Three Bedrooms,Westminster,220,2023
+Four or More Bedrooms,Westminster,40,2023
