@@ -75,6 +75,130 @@ See the raw file for examples of how to hide computational output as there is co
 
 ```{python}
 
+#GWR-Entire home/apt price and density
+import pandas as pd
+import geopandas as gpd
+from libpysal.weights import Queen
+from esda import Moran, Moran_Local
+import matplotlib.pyplot as plt
+from mgwr.gwr import GWR
+import pyproj
+import numpy as np
+from sklearn.preprocessing import StandardScaler
+
+# Read Airbnb “Entire home/apt” data
+Enprice_file = r"C:/Users/asus/OneDrive - University College London/CASA0007 reading/Enprice.csv"
+shapefile = r"C:/Users/asus/OneDrive - University College London/Desktop/ESRI/London_Borough_Excluding_MHW.shp"
+price_by_neighbourhood = pd.read_csv(Enprice_file)
+geo_data = gpd.read_file(shapefile)
+geo_data = geo_data.merge(price_by_neighbourhood, left_on="NAME", right_on="neighbourhood")
+geo_data['price'] = pd.to_numeric(geo_data['price'], errors='coerce')
+
+# Draw “Entire home/apt” price map
+fig, ax = plt.subplots(1, 1, figsize=(10, 10))
+geo_data.plot(column='price',
+              cmap='coolwarm',
+              legend=True,
+              linewidth=0.5,
+              edgecolor='black',
+              ax=ax)
+
+ax.set_title("Airbnb “Entire home/apt” price - borough", fontsize=15)
+ax.set_axis_off()
+plt.show()
+
+# price Moran's I test
+weights = Queen.from_dataframe(geo_data)
+weights.transform = "R"
+
+moran = Moran(geo_data["price"], weights)
+print(f"Global Moran's I: {moran.I}, p-value: {moran.p_sim}")
+
+# Read other data（income median, population density，airbnb Entire home density）,merge all data
+income_pp_file = r"C:/Users/asus/OneDrive - University College London/Desktop/social-eco data.xlsx"
+income_pp_df = pd.read_excel(income_pp_file)
+
+mean_price_file = r"C:/Users/asus/OneDrive - University College London/CASA0007 reading/merged_rental_and_density.csv"
+mean_price_df = pd.read_csv(mean_price_file)
+
+merged_data = geo_data.merge(income_pp_df, left_on="NAME", right_on="NAME", how="left")
+merged_data = merged_data.merge(mean_price_df, left_on="NAME", right_on="NAME", how="left")
+
+# Extract the latitude and longitude of the center point
+merged_data['centroid'] = merged_data.geometry.centroid
+merged_data['latitude'] = merged_data['centroid'].y
+merged_data['longitude'] = merged_data['centroid'].x
+
+# Set projection: OSGB36 (UK National Grid) to WGS84 (Latitude and longitude coordinate system)
+projection = pyproj.Transformer.from_crs("EPSG:27700", "EPSG:4326", always_xy=True)
+
+def convert_to_lat_lon(x, y):
+    lon, lat = projection.transform(x, y)
+    return lat, lon
+
+merged_data[['latitude', 'longitude']] = merged_data.apply(
+    lambda row: pd.Series(convert_to_lat_lon(row['longitude'], row['latitude'])),
+    axis=1
+)
+
+
+# Independent and dependent variables of GWR were extracted and standardized
+y = merged_data["borough_weighted_average"].values.reshape((-1, 1))
+X = merged_data[["price", "Density", "income-median", "Population per hectare"]].values
+scaler_X = StandardScaler()
+scaler_y = StandardScaler()
+X_std = scaler_X.fit_transform(X)
+y_std = scaler_y.fit_transform(y)
+
+# Execute the GWR model and view the regression results
+coords = [(lat, lon) for lat, lon in zip(merged_data['latitude'], merged_data['longitude'])]
+bw = 20
+gwr_model = GWR(coords, y_std, X_std, bw)
+gwr_results = gwr_model.fit()
+gwr_model = GWR(coords, y, X, bw)
+gwr_results = gwr_model.fit()
+print("GWR results:", gwr_results.summary())
+
+# Get the GWR coefficient of Airbnb “Entire home/apt” price and visualize it
+gwr_coefficients = gwr_results.params[:, 1]
+gwr_coefficients_abs = np.abs(gwr_coefficients)
+
+merged_data['gwr_coefficients_abs'] = gwr_coefficients
+fig, ax = plt.subplots(figsize=(12, 10))
+from matplotlib.colors import LinearSegmentedColormap
+import matplotlib.pyplot as plt
+red_cmap = LinearSegmentedColormap.from_list("custom_red", ["#F5F8FA", "#990000"])
+merged_data.plot(column='gwr_coefficients_abs',
+                 ax=ax,
+                 legend=True,
+                 legend_kwds={'label': "Airbnb “Entire home/apt” price-GWR Coefficients",
+                              'orientation': "horizontal"},
+                 cmap=red_cmap,
+                 edgecolor='k', linewidth=0.5)
+plt.title("Airbnb “Entire home/apt” price-GWR Coefficients Visualization", fontsize=16)
+plt.xlabel('Longitude')
+plt.ylabel('Latitude')
+plt.show()
+
+# Get the GWR coefficient of Airbnb “Entire home/apt” Density and visualize it
+gwr_coefficients = gwr_results.params[:, 2]
+gwr_coefficients_abs = np.abs(gwr_coefficients)
+merged_data['gwr_coefficients_abs'] = gwr_coefficients
+fig, ax = plt.subplots(figsize=(12, 10))
+blue_cmap = LinearSegmentedColormap.from_list("custom_blue", ["#F5F8FA", "#133F7F"])
+merged_data.plot(column='gwr_coefficients_abs',
+                 ax=ax,
+                 legend=True,
+                 legend_kwds={'label': "Airbnb “Entire home/apt” Density-GWR Coefficients",
+                              'orientation': "horizontal"},
+                 cmap=blue_cmap,
+                 edgecolor='k', linewidth=0.5)
+
+plt.title("Airbnb “Entire home/apt” Density-GWR Coefficients Visualization", fontsize=16)
+plt.xlabel('Longitude')
+plt.ylabel('Latitude')
+plt.show()
+
 ```
 
 ## 1. Who collected the InsideAirbnb data?
