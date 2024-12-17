@@ -270,15 +270,17 @@ Second, representative bias. Airbnb listings may be concentrated in administrati
 ## 6. With reference to the InsideAirbnb data (*i.e.* using numbers, figures, maps, and descriptive statistics), what does an analysis of Hosts and the types of properties that they list suggest about the nature of Airbnb lettings in London? 
 
 ::: {.duedate}
-
+### 1.Trends in London's Airbnb Market (2019-2023) 
 From 2019 to 2023, London’s Airbnb market peaked in 2021 after a pandemic-related dip, then stabilised around 44,000-46,000 listings. Entire homes dominated throughout, reflecting strong, consistent demand, while room listings remained minimal. Croydon and Kensington and Chelsea led in entire home listings, indicating stable, high-demand rental markets. Overall, the market has recovered and stabilised, driven by entire home rentals.
+
+### 2.Geographical Distribution of Airbnb Listings 
 First, after analyzing Airbnb listing patterns in London using K-means clustering and Moran’s I revealed a clear spatial trend: central London has densely clustered listings, while outer areas have fewer. Similar results were confirmed at the Borough level, where rental price data was available.
 ############################################################FIGURE!!!!!!!!!
 
 The kernel density analysis result show that Airbnb listings in London cluster in central areas like Westminster, the West End, and King’s Cross due to tourist attractions and good transport links. Entire homes dominate the city center, offering privacy at higher prices, while private rooms are more dispersed in residential areas like Hackney and Islington, catering to budget travelers. Shared rooms are rare and mostly found in outer neighborhoods, reflecting lower demand.
 ############################################################FIGURE!!!!!!!!!
 
-
+### 3.Pricing Differences Across London's Airbnb Listings
 According to the statistics of Airbnb listing data in 2023, the majority of Airbnb listings are "Entire home/apt", accounting for 66.8%. In addition, from the average rent distribution diagram of "Entire home/apt" housing type in Figure 1, it can be seen that there are significant differences in rent in different administrative regions. City centres such as Westminster and Kensington&Chelsea rent for up to £350 a night, while outside the city centre rates are relatively low.
 
 ############################################################FIGURE!!!!!!!!!
