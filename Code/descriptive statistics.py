@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import os
 
 # Define input and output paths
-input_path = './cleaned_london_borough/combined_bedroom_category_long.csv'
+input_path = './data/combined_bedroom_category_long.csv'
 output_folder = './descriptive statistics'
 os.makedirs(output_folder, exist_ok=True)
 
