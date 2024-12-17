@@ -48,22 +48,24 @@ jupyter:
 
 ## Declaration of Authorship {.unnumbered .unlisted}
 
-We, [insert your group's names], pledge our honour that the work presented in this assessment is our own. Where information has been derived from other sources, we confirm that this has been indicated in the work. Where a Large Language Model such as ChatGPT has been used we confirm that we have made its contribution to the final submission clear.
+We, JueLin Liu, Yingxi Zhou, Yale Lu, Yuanqing Zhang, Kun Li , pledge our honour that the work presented in this assessment is our own. Where information has been derived from other sources, we confirm that this has been indicated in the work. Where a Large Language Model such as ChatGPT has been used we confirm that we have made its contribution to the final submission clear.
 
-Date:
+Date:17/12/2024
 
-Student Numbers: 
+Student Numbers: JueLin Liu, 24036199 Yingxi Zhou, 23225727 Yale Lu, 24068573 Yuanqing Zhang, 23157049 Kun Li
 
 ## Brief Group Reflection
 
 | What Went Well | What Was Challenging |
 | -------------- | -------------------- |
-| A              | B                    |
+| A              | Data Collection      |
 | C              | D                    |
 
 ## Priorities for Feedback
 
 Are there any areas on which you would appreciate more detailed feedback if we're able to offer it?
+
+
 
 {{< pagebreak >}}
 
@@ -124,14 +126,20 @@ Inside Airbnb collects its data by scraping publicly available information from 
 
 ( 11 points; Answer due Week 9 )
 
-:::InsideAirbnb collects data by scraping publicly available Airbnb listings. This method can introduce gaps, such as missing inactive or off-platform listings, and inaccuracies due to scraping errors or Airbnb’s data obfuscation (eg. hidden locations, limited occupancy transparency). The dataset may also be outdated, as listings can change between scraping sessions, including deactivations, modifications, or newly added properties.
-While it provides a snapshot of Airbnb’s activity, it doesn’t fully represent the complexities of host and guest interactions. The data raises concerns about representation bias (excluding hidden transactions), privacy (use of personal data without consent), and policy implications (risk of misleading urban planning decisions based on incomplete data).
+:::
+
+InsideAirbnb collects data by scraping publicly available Airbnb listings, a method that can introduce certain limitations. For instance, inactive or off-platform listings may be missing, leading to incomplete coverage. Scraping errors and Airbnb’s deliberate data obfuscation, hiding exact locations or limiting transparency about occupancy, can also affect data accuracy. Additionally, because listings can be deactivated, modified, or newly added between scraping sessions, the dataset may become outdated over time.
+
+While the data provides a useful snapshot of Airbnb’s activity, it does not fully capture the complexities of host and guest interactions. This raises concerns about representation bias, as hidden transactions remain unaccounted for. Privacy issues also emerge from using personal data without explicit consent. Furthermore, relying on incomplete data could result in misleading conclusions for urban planning and policy-making.
+
 
 ## 5. What ethical considerations does the use of the InsideAirbnb data raise? 
 
 ::: {.duedate}
 
 ( 18 points; Answer due {{< var assess.group-date >}} )
+First, informed consent and privacy issues. Inside Airbnb is obtained by scraping data from the Airbnb website. The possible problem is that hosts and Airbnb users do not know that their data is being collected, which raises transparency and autonomy issues. At the same time, the scraped data includes property addresses, personal comments, etc., which may cause harassment or privacy violations.
+Second, representative bias. Airbnb listings may be concentrated in administrative areas with better geographical (such as inner London) and socioeconomic conditions, while low-income communities and underrepresented communities with fewer Airbnb listings may be ignored or marginalized. At the same time, hosts on Airbnb do not represent the general population. They usually tend to be higher-income people and do not include workers living in public housing. Conclusions based solely on Airbnb data may ignore diverse housing needs. In addition, Airbnb's search algorithm may give priority to highly rated, high-priced, and more active listings, ignoring inactive or low-rent listings, resulting in the scraped data reflecting platform bias and exaggerating market activities.
 
 :::
 
