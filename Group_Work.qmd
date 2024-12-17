@@ -73,9 +73,13 @@ Are there any areas on which you would appreciate more detailed feedback if we'r
 
 See the raw file for examples of how to hide computational output as there is code hidden here.
 
-```{python}
+```{bash}
+# Install the required Python packages
+pip install numpy pandas matplotlib seaborn scipy scikit-learn statsmodels geopandas shapely pyproj libpysal esda mgwr splot
+```
 
-#GWR-Entire home/apt price and density
+```{python}
+#| echo: False
 import pandas as pd
 import geopandas as gpd
 from libpysal.weights import Queen
@@ -87,8 +91,12 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 
 # Read Airbnb “Entire home/apt” data
-Enprice_file = r"C:/Users/asus/OneDrive - University College London/CASA0007 reading/Enprice.csv"
-shapefile = r"C:/Users/asus/OneDrive - University College London/Desktop/ESRI/London_Borough_Excluding_MHW.shp"
+data_folder = "https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/refs/heads/main/data"  # URL base for data files
+shapefile_folder = "https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/refs/heads/main/data/ESRI"  # URL base for shapefiles
+
+Enprice_file = f"{data_folder}/Enprice.csv"
+shapefile = f"{shapefile_folder}/London_Borough_Excluding_MHW.zip"
+
 price_by_neighbourhood = pd.read_csv(Enprice_file)
 geo_data = gpd.read_file(shapefile)
 geo_data = geo_data.merge(price_by_neighbourhood, left_on="NAME", right_on="neighbourhood")
@@ -115,10 +123,10 @@ moran = Moran(geo_data["price"], weights)
 print(f"Global Moran's I: {moran.I}, p-value: {moran.p_sim}")
 
 # Read other data（income median, population density，airbnb Entire home density）,merge all data
-income_pp_file = r"C:/Users/asus/OneDrive - University College London/Desktop/social-eco data.xlsx"
+income_pp_file = f"{data_folder}/social-eco data.xlsx"
 income_pp_df = pd.read_excel(income_pp_file)
 
-mean_price_file = r"C:/Users/asus/OneDrive - University College London/CASA0007 reading/merged_rental_and_density.csv"
+mean_price_file = f"{data_folder}/merged_rental_and_density.csv"
 mean_price_df = pd.read_csv(mean_price_file)
 
 merged_data = geo_data.merge(income_pp_df, left_on="NAME", right_on="NAME", how="left")
@@ -198,7 +206,571 @@ plt.title("Airbnb “Entire home/apt” Density-GWR Coefficients Visualization",
 plt.xlabel('Longitude')
 plt.ylabel('Latitude')
 plt.show()
+```
 
+```{python}
+import pandas as pd
+import statsmodels.api as sm
+
+# Regression analysis
+
+file_url = "https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/refs/heads/main/data/borough_combined_data_2023.csv"
+
+regression_data = pd.read_csv(file_url)
+
+print(regression_data.head()) 
+print(regression_data.dtypes)
+
+# Check for NaNs in the specified columns
+nan_check = regression_data[['Density', 'weighted_price', 'income-median', 
+                             'Population per hectare', 'unemploy_rate']].isna().sum()
+print("Missing Values (NaNs):\n", nan_check)
+
+import numpy as np
+
+# Check for positive and negative infinite values
+inf_check_pos = (regression_data[['Density', 'weighted_price', 'income-median', 
+                                  'Population per hectare', 'unemploy_rate']] == np.inf).sum()
+inf_check_neg = (regression_data[['Density', 'weighted_price', 'income-median', 
+                                  'Population per hectare', 'unemploy_rate']] == -np.inf).sum()
+
+print("Positive Infinite Values:\n", inf_check_pos)
+print("Negative Infinite Values:\n", inf_check_neg)
+
+# Define dependent and independent variables
+
+y = regression_data['mean_all']
+X =  regression_data[['Density', 'weighted_price', 'meadian_earnings','ln_population','unemploy_rate']]
+
+from statsmodels.stats.outliers_influence import variance_inflation_factor
+
+# Calculate VIF
+X_no_const = X
+X_with_const = sm.add_constant(X_no_const)
+
+# Output VIF value
+vif = pd.DataFrame()
+vif['Variable'] = X_with_const.columns
+vif['VIF'] = [variance_inflation_factor(X_with_const.values, i) for i in range(X_with_const.shape[1])]
+
+print(vif)
+
+X = sm.add_constant(X)
+
+#Build a regression model
+model = sm.OLS(y, X).fit()
+
+# Output regression results
+print(model.summary())
+
+# Define grouped regression function
+# Here type=0 is Inner London, type=1 is Outer London
+def run_regression(data, group_value):
+    group_data = data[data['type'] == group_value]
+    
+   # Define dependent and independent variables
+    y = group_data['Median_One Bedroom']
+    y = group_data['mean_all']
+    X = group_data[['Density', 'weighted_price', 'meadian_earnings', 'ln_population', 'unemploy_rate']]
+    X = sm.add_constant(X)
+    
+    # Regression analysis
+    model = sm.OLS(y, X).fit()
+    print(f"Regression results: type = {group_value}\n")
+    print(model.summary())
+    return model
+
+# Grouped regression
+model_type_0 = run_regression(regression_data, 0)
+model_type_1 = run_regression(regression_data, 1)
+
+
+## Considering that there are significant spatial differences between inner and outer London (see Moran I clustering results), the London boroughs are further divided into inner and outer London for regression analysis. Table m shows the regression results of inner and outer London. 
+
+## It can be seen that the impact of airbnb density in inner London on the rental price of the borough is still significant, and the coefficient is also larger than the benchmark regression. The impact of outer London is not significant. This may be because inner London is home to many tourist attractions and cultural heritages, and is the core of the tourism and short-term rental market. At the same time, Airbnb has increased the demand for housing in the rental market, resulting in a decrease in the supply of long-term rentals, which has driven up rents. Local residents may convert long-term rentals to short-term Airbnb rentals, reducing the number of available rentals on the market. Outer London is dominated by residential and commuter areas, and the rental market is less correlated with the short-term tourism rental market. The housing supply is more sufficient than that in Inner London, the balance between supply and demand is better, and the Airbnb activity is lower than that in Inner London.
+
+## In order to determine whether Airbnb density has a lag effect and an error effect in space, we regress Airbnb density using a spatial lag model and a spatial error model respectively. The results are shown in Table K. The coefficients of the spatial lag term and the spatial error term are not significant, indicating that the above effects do not exist in space.
+
+from pysal.model import spreg
+from libpysal.weights import Queen
+import geopandas as gpd
+import pandas as pd
+
+# Read shp file
+url = "https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/main/data/borough_merged.zip"
+
+gdf_merged = gpd.read_file(url)
+
+# Check data columns
+print(gdf_merged.columns)
+
+# Create a spatial weight matrix based on the queen adjacency rule
+w = Queen.from_dataframe(gdf_merged)
+w.transform = 'R' 
+
+print(gdf_merged.columns)
+
+# Define dependent and independent variables
+y = gdf_merged['mean_all'].values.reshape(-1, 1)
+X = gdf_merged[['Density']].values
+
+model_sar = spreg.ML_Lag(
+    y, X, w, 
+    name_y='mean_all', 
+    name_x=['Density']
+)
+
+print(model_sar.summary)
+
+# Run the spatial error model
+model_sem = spreg.ML_Error(y, X, w, name_y='mean_all', 
+                           name_x=['Density'])
+
+# Print model results
+print(model_sem.summary)
+```
+
+```{python}
+#| echo: False
+import geopandas as gpd
+import pandas as pd
+from shapely.geometry import Point
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
+import seaborn as sns
+from matplotlib.colors import ListedColormap
+from libpysal.weights import KNN  # Import KNN
+from esda.moran import Moran, Moran_Local
+from splot.esda import moran_scatterplot, lisa_cluster
+from sklearn.metrics import silhouette_score
+from scipy.stats import pearsonr
+
+#  read in data
+file_url = "https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/main/data/cleaned_listings.csv"
+df = pd.read_csv(file_url)
+
+#  creat the points
+geometry = [Point(xy) for xy in zip(df["longitude"], df["latitude"])]
+
+#  Creat a GeoDataFrame，define the original CRS as WGS84
+gdf = gpd.GeoDataFrame(df, geometry=geometry, crs="EPSG:4326")
+
+# projection to the British CRS
+gdf_projected = gdf.to_crs("EPSG:27700")
+
+# read LOSA
+file_url = "https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/main/data/LSOA_2011_London_gen_MHW.zip"
+lsoa = gpd.read_file(file_url)
+
+# Visualization
+lsoa.plot(figsize=(10, 10), edgecolor="black")
+
+# Set the title and display
+plt.title("City Locations")
+plt.xlabel("Longitude")
+plt.ylabel("Latitude")
+plt.show()
+
+points_gdf = gdf.to_crs(lsoa.crs)
+# spatial join
+points_with_regions = gpd.sjoin(points_gdf, lsoa, how="left", predicate="within")
+
+# add columns
+points_with_regions = points_with_regions.rename(columns={"LSOA11CD": "LSOA11CD"})
+
+# show the result
+print(points_with_regions[["id", "longitude", "latitude", "LSOA11CD"]])
+
+# visualization
+fig, ax = plt.subplots(figsize=(10, 10))
+
+# build the boundary
+lsoa.plot(ax=ax, color="lightgrey", edgecolor="black")
+
+# plot the points
+points_with_regions.plot(ax=ax, color="red", markersize=2)
+plt.title("Points and Regions")
+plt.xlabel("Longitude")
+plt.ylabel("Latitude")
+plt.show()
+
+# calculate the ares
+lsoa["Area_m2"] = lsoa.geometry.area
+lsoa["Area_km2"] = lsoa["Area_m2"] / 1_000_000
+
+# show the result
+print(lsoa[["LSOA11CD","Area_km2"]].head())
+
+# Ensure consistent coordinate systems
+if gdf.crs != "EPSG:27700":
+    gdf = gdf.to_crs("EPSG:27700")
+
+if lsoa.crs != "EPSG:27700":
+    lsoa = lsoa.to_crs("EPSG:27700")
+
+# spatial join
+points_in_lsoa = gpd.sjoin(gdf, lsoa, how="left", predicate="within")
+
+# 4. Count the points by area (LSOA11CD)
+point_counts = points_in_lsoa.groupby("LSOA11CD").size().reset_index(name="Point_Count")
+lsoa = lsoa.merge(point_counts, on="LSOA11CD", how="left")
+
+
+# Fill NaN values with 0
+lsoa["Point_Count"] = lsoa["Point_Count"].fillna(0)
+lsoa["Density"] = lsoa["Point_Count"] / lsoa["Area_km2"]
+
+# Extract the geometric center and density values of the area.
+lsoa["centroid"] = lsoa.geometry.centroid  
+lsoa["x"] = lsoa["centroid"].x  
+lsoa["y"] = lsoa["centroid"].y 
+cluster_data = lsoa[["x", "y", "Density"]].values
+
+# Data normalization
+scaler = StandardScaler()
+cluster_data_scaled = scaler.fit_transform(cluster_data)
+
+# Get the suitable number of clusterings by silhouette_score
+
+silhouette_scores = []
+for k in range(2, 10):
+    kmeans = KMeans(n_clusters=k, random_state=42)
+    labels = kmeans.fit_predict(cluster_data_scaled)
+    score = silhouette_score(cluster_data_scaled, labels)
+    silhouette_scores.append(score)
+
+plt.plot(range(2, 10), silhouette_scores, marker='o')
+plt.title("Silhouette Score for K-Means LSOA Clustering")
+plt.xlabel("Number of Clusters")
+plt.ylabel("Silhouette Score")
+plt.show()
+
+# Make clusterings of 6
+n_clusters = 6 
+kmeans = KMeans(n_clusters=n_clusters, random_state=42)
+lsoa["Cluster1"] = kmeans.fit_predict(cluster_data_scaled)  
+
+# Visualization using seaborn color palette
+fig, ax = plt.subplots(1, 1, figsize=(10, 8))
+
+# Choose a seaborn color palette and convert it to a ListedColormap
+palette = sns.color_palette("coolwarm", n_colors=n_clusters)  # generate viridis color palette
+cmap = ListedColormap(palette.as_hex())  # Convert palette to ListedColormap
+
+# Plot using the chosen color palette with reduced transparency (alpha=1)
+lsoa.plot(column="Cluster1", cmap=cmap, legend=True, ax=ax, alpha=1,linewidth=0.1)
+
+plt.title("K-Means Clustering of LSOA by Spatial and Density Features")
+plt.savefig("kmeans_clustering_lsoadensity_viridis.png", dpi=300, bbox_inches="tight")
+plt.show()
+
+# Create KNN contiguity weight matrix with k=5 (5 nearest neighbors).
+k = 5  # Number of nearest neighbors
+w = KNN.from_dataframe(lsoa, k=k)  # Create KNN weight matrix
+# Weight matrix normalization.
+w.transform = "r"
+
+# Calculate global Moran's I.
+moran = Moran(lsoa["Density"], w)
+print(f"Moran's I: {moran.I}")
+print(f"p-value: {moran.p_sim}")
+
+# Calculate local Moran's I
+lisa = Moran_Local(lsoa["Density"], w)
+
+# Add cluster types and significance to the lsoa dataframe
+lsoa["lisa_cluster"] = lisa.q  
+lsoa["lisa_sig"] = lisa.p_sim  
+
+# Cluster type description:
+# 1 = High-High: High-value areas surrounded by high-value neighbors (High-value clusters)
+# 2 = Low-Low: Low-value areas surrounded by low-value neighbors (Low-value clusters)
+# 3 = High-Low: High-value areas surrounded by low-value neighbors (High-value outliers)
+# 4 = Low-High: Low-value areas surrounded by high-value neighbors (Low-value outliers)
+
+# Plot the LISA results
+fig, ax = plt.subplots(1, 1, figsize=(12, 8))
+lisa_cluster(lisa, lsoa, p=0.05, ax=ax)
+plt.title("LISA Cluster Map by LSOA (KNN Moran's I)")
+plt.savefig("12_Moran'I_lsoadensity_knn.png", dpi=300, bbox_inches="tight")
+plt.show()
+
+# Extract the required columns.
+Moran_I = bor[["GSS_CODE","NAME", "lisa_cluster","lisa_sig"]]
+
+# save as csv
+Moran_I.to_csv("boroughdensity_Moran_I.csv", index=False, encoding="utf-8")
+
+# read listings
+listings = pd.read_csv("data/listings.csv", encoding="ISO-8859-1")
+
+# Keep the required columns.
+columns_to_keep = ['calculated_host_listings_count','id', 'latitude', 'longitude', 'price', 'host_id']
+listings = listings[columns_to_keep]
+
+# Remove missing values.
+listings = listings.dropna()
+
+# save as a file
+listings.to_csv("processed_listings.csv", index=False)
+
+#  creat the points
+geometry = [Point(xy) for xy in zip(listings["longitude"], df["latitude"])]
+
+#  Creat a GeoDataFrame，define the original CRS as WGS84
+gdf2 = gpd.GeoDataFrame(listings, geometry=geometry, crs="EPSG:4326")
+
+# projection to the British CRS
+gdf2_projected = gdf2.to_crs("EPSG:27700")
+points_gdf2 = gdf2.to_crs(bor.crs)
+
+# Spatial Join: Linking point data with area data.
+points_with_regions2 = gpd.sjoin(points_gdf2, bor, how="left", predicate="within")
+
+# Add the column as names of boroughs
+points_with_regions2 = points_with_regions2.rename(columns={"GSS_CODE": "GSS_CODE"})
+
+# make sure the same CRS
+if gdf2.crs != bor.crs:
+    gdf2 = gdf2.to_crs(bor.crs)
+# use Seaborn color
+sns_colors = sns.color_palette("deep") 
+blue = sns_colors[0]  
+red = sns_colors[3]   
+
+# plot
+fig, ax = plt.subplots(figsize=(10, 10))
+
+# background is bor
+bor.plot(ax=ax, color="lightgrey", edgecolor="black", linewidth=0.5, alpha=0.7)
+
+# make the point plot
+gdf2[gdf2['calculated_host_listings_count'] == 1].plot(
+    ax=ax, color=blue, label="Single-unit Host", markersize=4
+)
+gdf2[gdf2['calculated_host_listings_count'] > 1].plot(
+    ax=ax, color=red, label="Multi-unit Host", markersize=4
+)
+
+# Add a title and legend.
+ax.set_title("Single-unit vs Multi-unit Hosts", fontsize=14)
+ax.legend()
+
+# show the result
+plt.savefig("Single-unit vs Multi-unit Hosts.png", dpi=300, bbox_inches="tight")
+plt.show()
+
+# Group by GSS_CODE and calculate the count of id and the number of unique host_id for each area.
+result = points_with_regions2.groupby("GSS_CODE").agg(
+    id_count=("id", "count"),                
+    host_id_count=("host_id", "nunique")     
+).reset_index()
+
+# Calculate the average number of listings per host.
+result["id_host_ratio"] = result["id_count"] / result["host_id_count"]
+points_with_regions2 = points_with_regions2.merge(
+    result[["GSS_CODE", "id_count", "host_id_count", "id_host_ratio"]],
+    on="GSS_CODE",
+    how="left"
+)
+
+# read final_neighbourhood_prices.csv 
+file_url = "https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/main/data/final_neighbourhood_prices.csv"
+neighbourhood_prices = pd.read_csv(file_url)
+
+print(neighbourhood_prices.head())
+print(points_with_regions2.head())
+
+# join 'weighted_price'to points_with_regions2 
+points_with_prices = points_with_regions2.merge(
+    neighbourhood_prices[['neighbourhood', 'weighted_price']],  
+    left_on='NAME',    
+    right_on='neighbourhood',  
+    how='left'        
+)
+points_data = points_with_prices[['NAME', 'weighted_price', 'id_host_ratio']]
+# join with bor and new data
+bor = bor.merge(
+    points_data.groupby('NAME', as_index=False).mean(), 
+    on='NAME',      
+    how='left'      
+)
+
+# Extract the weighted_price and id_host_ratio columns and remove missing values.
+data = bor[['weighted_price', 'id_host_ratio']].dropna()
+
+#  Calculate the Pearson correlation coefficient and p-value.
+pearson_coef, p_value = pearsonr(data['weighted_price'], data['id_host_ratio'])
+print("\nPearson Correlation Coefficient:", pearson_coef)
+print("P-value:", p_value)
+```
+
+```{python}
+#| echo: False
+# density_analysis
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+
+# Read density data
+density_file = "https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/main/data/density_data.csv"
+shapefile_zip = "https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/main/data/London_Borough_Excluding_MHW.zip"
+
+density_df = pd.read_csv(density_file)
+shape_gdf = gpd.read_file(shapefile_zip)
+
+# Merge shapefile with density data
+merged_gdf = shape_gdf.merge(density_df, left_on="NAME", right_on="borough")
+
+# Plot density map
+fig, ax = plt.subplots(1, 1, figsize=(10, 10))
+merged_gdf.plot(column="density", cmap="OrRd", legend=True, ax=ax)
+plt.title("Airbnb Density by Borough")
+plt.savefig("./output_data/density_map.png")
+plt.show()
+
+
+# entireroom_density
+# Analysis of entire room density
+entire_home_file = "https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/main/data/entire_home_density.csv"
+entire_home_df = pd.read_csv(entire_home_file)
+
+# Load the data
+entire_home_df = pd.read_csv(entire_home_file)
+shape_gdf = gpd.read_file(shapefile)
+
+# Merge with shapefile
+merged_entire_gdf = shape_gdf.merge(entire_home_df, left_on="NAME", right_on="borough")
+
+# Plot map
+fig, ax = plt.subplots(1, 1, figsize=(10, 10))
+merged_entire_gdf.plot(column="entire_home_density", cmap="Blues", legend=True, ax=ax)
+plt.title("Entire Home Density by Borough")
+plt.savefig("./output_data/entire_home_density_map.png")
+plt.show()
+
+
+# weighted_average_andmerge
+# Weighted Average Calculation and Merge
+weighted_avg_file = "https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/main/data/weighted_average.csv"
+additional_data_file = "https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/main/data/additional_data.csv"
+weighted_avg_df = pd.read_csv(weighted_avg_file)
+additional_df = pd.read_csv(additional_data_file)
+
+# Load files
+weighted_avg_df = pd.read_csv(weighted_avg_file)
+additional_df = pd.read_csv(additional_data_file)
+
+# Merge data
+merged_df = pd.merge(weighted_avg_df, additional_df, on="borough")
+
+# Calculate weighted average price
+merged_df["weighted_avg_price"] = merged_df["price"] * merged_df["weight"]
+
+# Save results
+output_path = "./output_data/weighted_avg_results.csv"
+merged_df.to_csv(output_path, index=False)
+
+print("Weighted average calculation completed. Results saved to:", output_path)
+```
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+import os
+
+# Define input and output paths
+input_path = "https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/main/data/combined_bedroom_category_long.csv"
+output_folder = './output'
+os.makedirs(output_folder, exist_ok=True)
+
+# Load the data
+df = pd.read_csv(input_path)
+
+# Ensure Count_of_Rents is numeric
+df['Count_of_Rents'] = pd.to_numeric(df['Count_of_Rents'], errors='coerce')
+df = df.dropna(subset=['Count_of_Rents'])  # Remove rows with invalid values
+df['Count_of_Rents'] = df['Count_of_Rents'].astype(int)
+
+# --- Data Analysis ---
+
+# 1. Total number of Airbnb listings over years
+total_listings = df.groupby('Year')['Count_of_Rents'].sum().reset_index()
+total_listings.columns = ['Year', 'Total_Rents']
+
+# 2. Adjust room type: keep 'Room', aggregate others as 'Entire home'
+df['Bedroom_Category_Adjusted'] = df['Bedroom_Category'].apply(
+    lambda x: 'Room' if 'Room' in x else 'Entire home'
+)
+
+# Group data for adjusted room types
+room_type_summary = df.groupby(['Year', 'Bedroom_Category_Adjusted'])['Count_of_Rents'].sum().reset_index()
+room_type_summary.columns = ['Year', 'Bedroom_Category', 'Total_Rents']
+
+# 3. Top boroughs with the most listings and their room type distribution
+top_boroughs = df.groupby('Borough')['Count_of_Rents'].sum().nlargest(3).index  # Top 3 boroughs
+top_regions_summary = df[df['Borough'].isin(top_boroughs)].groupby(
+    ['Year', 'Borough', 'Bedroom_Category_Adjusted']
+)['Count_of_Rents'].sum().reset_index()
+top_regions_summary.columns = ['Year', 'Borough', 'Bedroom_Category', 'Total_Rents']
+
+# Get a sorted list of years
+years = sorted(df['Year'].unique())
+
+# --- Data Visualization ---
+
+# Visualization 1: Total Airbnb listings over years
+plt.figure(figsize=(10, 6))
+plt.plot(total_listings['Year'], total_listings['Total_Rents'], marker='o', linestyle='-', color='b')
+plt.title("Total Airbnb Listings Change Over Years")
+plt.xlabel("Year")
+plt.ylabel("Total Listings")
+plt.xticks(years, rotation=45)  # Ensure x-axis has integer years
+plt.grid(True)
+plt.savefig(os.path.join(output_folder, "total_listings_trend.png"))
+plt.show()
+
+# Visualization 2: Change in adjusted room types over years
+plt.figure(figsize=(12, 8))
+for room_type in room_type_summary['Bedroom_Category'].unique():
+    subset = room_type_summary[room_type_summary['Bedroom_Category'] == room_type]
+    plt.plot(subset['Year'], subset['Total_Rents'], marker='o', linestyle='-', label=room_type)
+
+plt.title("Change in Room Types Over Years")
+plt.xlabel("Year")
+plt.ylabel("Number of Listings")
+plt.xticks(years, rotation=45)
+plt.legend(title="Room Type")
+plt.grid(True)
+plt.savefig(os.path.join(output_folder, "adjusted_room_type_trend.png"))
+plt.show()
+
+# Visualization 3: Top boroughs and room type distribution
+plt.figure(figsize=(12, 8))
+for borough in top_boroughs:
+    subset = top_regions_summary[top_regions_summary['Borough'] == borough]
+    for category in subset['Bedroom_Category'].unique():
+        subdata = subset[subset['Bedroom_Category'] == category]
+        plt.bar(subdata['Year'] + (0.1 * top_boroughs.tolist().index(borough)),
+                subdata['Total_Rents'], label=f"{borough} - {category}")
+
+plt.title("Top Boroughs and Their Room Type Distribution")
+plt.xlabel("Year")
+plt.ylabel("Total Listings")
+plt.xticks(years, rotation=45)
+plt.legend(title="Borough and Room Type", bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.tight_layout()
+plt.savefig(os.path.join(output_folder, "top_boroughs_room_type.png"))
+plt.show()
+
+# --- Save Results ---
+total_listings.to_csv(os.path.join(output_folder, "total_listings_summary.csv"), index=False)
+room_type_summary.to_csv(os.path.join(output_folder, "adjusted_room_type_summary.csv"), index=False)
+top_regions_summary.to_csv(os.path.join(output_folder, "top_regions_summary.csv"), index=False)
+
+print("Analysis completed. Results and visualizations have been saved successfully.")
 ```
 
 ## 1. Who collected the InsideAirbnb data?
