@@ -311,13 +311,6 @@ Encouraging the building of more affordable housing is another important step. R
 Governments should improve how they collect data on short-term rental activity. Having detailed information on how often properties are rented, the prices charged, and which areas are most affected will help policymakers better understand the impact of short-term rentals. This can lead to more effective and targeted policies (Crompton, 2020).
 To protect local housing markets, governments should regulate short-term rentals more effectively, support affordable housing, and improve data collection. These steps can help ensure that housing remains affordable and accessible for residents while still allowing for the benefits of short-term rentals.
 
-### Reference
-
-Baker, J., Smith, L. & Clark, R. (2023) 'Regulating short-term rentals: Opportunities and challenges in urban tourism', Journal of Urban Studies, 52(3), pp. 181-198.
-Crompton, S. (2020). Short-term rentals and their impact on the housing market: A study of Airbnb in the UK. Journal of Housing Studies, 32(3), 259-276.
-Garay, L., Morales, E. & Wilson, D. (2020) 'The impact of short-term rentals on housing markets and local communities', Urban Affairs Review, 56(6), pp. 1248-1267.
-Gurran, N., & Phibbs, P. (2017). The influence of short-term rental platforms on urban housing markets: An Australian perspective. Urban Studies, 54(1), 19-40.
-Zervas, G., Proserpio, D., & Byers, J. W. (2017). The rise of the sharing economy: Estimating the impact of Airbnb on the hotel industry. Journal of Marketing Research, 54(5), 687-705.
 
 
 :::
@@ -331,3 +324,8 @@ Your QMD file should automatically download your BibTeX and CLS files and any ot
 Written in Markdown and generated from [Quarto](https://quarto.org/). Fonts used: [Spectral](https://fonts.google.com/specimen/Spectral) (mainfont), [Roboto](https://fonts.google.com/specimen/Roboto) (<span style="font-family:Sans-Serif;">sansfont</span>) and [JetBrains Mono](https://fonts.google.com/specimen/JetBrains%20Mono) (`monofont`). 
 
 ## References
+Baker, J., Smith, L. & Clark, R. (2023) 'Regulating short-term rentals: Opportunities and challenges in urban tourism', Journal of Urban Studies, 52(3), pp. 181-198.
+Crompton, S. (2020). Short-term rentals and their impact on the housing market: A study of Airbnb in the UK. Journal of Housing Studies, 32(3), 259-276.
+Garay, L., Morales, E. & Wilson, D. (2020) 'The impact of short-term rentals on housing markets and local communities', Urban Affairs Review, 56(6), pp. 1248-1267.
+Gurran, N., & Phibbs, P. (2017). The influence of short-term rental platforms on urban housing markets: An Australian perspective. Urban Studies, 54(1), 19-40.
+Zervas, G., Proserpio, D., & Byers, J. W. (2017). The rise of the sharing economy: Estimating the impact of Airbnb on the hotel industry. Journal of Marketing Research, 54(5), 687-705.
