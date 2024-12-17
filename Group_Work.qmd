@@ -848,11 +848,14 @@ From 2019 to 2023, London’s Airbnb market peaked in 2021 after a pandemic-rela
 ### 2.Geographical Distribution of Airbnb Listings 
 First, after analyzing Airbnb listing patterns in London using K-means clustering and Moran’s I revealed a clear spatial trend: central London has densely clustered listings, while outer areas have fewer. Similar results were confirmed at the Borough level, where rental price data was available.
 
-![fig4](https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/refs/heads/main/fig/fig4.jpg)
+![fig1(a)](https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/refs/heads/main/fig/fig1(a).png)
+![fig1(b)](https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/refs/heads/main/fig/fig1(b).png)
 
 The kernel density analysis result show that Airbnb listings in London cluster in central areas like Westminster, the West End, and King’s Cross due to tourist attractions and good transport links. Entire homes dominate the city center, offering privacy at higher prices, while private rooms are more dispersed in residential areas like Hackney and Islington, catering to budget travelers. Shared rooms are rare and mostly found in outer neighborhoods, reflecting lower demand.
 
 ![fig2(a)](https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/refs/heads/main/fig/fig2(a).png)
+![fig2(b)](https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/refs/heads/main/fig/fig2(b).png)
+![fig2(c)](https://raw.githubusercontent.com/Pink-Fur-BuBBles/Group-Work-for-FSDS/refs/heads/main/fig/fig2(c).png)
 
 ### 3.Pricing Differences Across London's Airbnb Listings
 According to the statistics of Airbnb listing data in 2023, the majority of Airbnb listings are "Entire home/apt", accounting for 66.8%. In addition, from the average rent distribution diagram of "Entire home/apt" housing type in Figure 1, it can be seen that there are significant differences in rent in different administrative regions. City centres such as Westminster and Kensington&Chelsea rent for up to £350 a night, while outside the city centre rates are relatively low.
