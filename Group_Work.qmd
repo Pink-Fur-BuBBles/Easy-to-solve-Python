@@ -78,7 +78,7 @@ See the raw file for examples of how to hide computational output as there is co
 pip install numpy pandas matplotlib seaborn scipy scikit-learn statsmodels geopandas shapely pyproj libpysal esda mgwr splot
 ```
 
-```{python}
+```{python, include=FALSE}
 #| echo: False
 import pandas as pd
 import geopandas as gpd
@@ -208,7 +208,7 @@ plt.ylabel('Latitude')
 plt.show()
 ```
 
-```{python}
+```{python, include=FALSE}
 import pandas as pd
 import statsmodels.api as sm
 
@@ -330,7 +330,7 @@ model_sem = spreg.ML_Error(y, X, w, name_y='mean_all',
 print(model_sem.summary)
 ```
 
-```{python}
+```{python, include=FALSE}
 #| echo: False
 import geopandas as gpd
 import pandas as pd
@@ -607,7 +607,7 @@ print("\nPearson Correlation Coefficient:", pearson_coef)
 print("P-value:", p_value)
 ```
 
-```{python}
+```{python, include=FALSE}
 #| echo: False
 # density_analysis
 import pandas as pd
@@ -676,7 +676,7 @@ merged_df.to_csv(output_path, index=False)
 print("Weighted average calculation completed. Results saved to:", output_path)
 ```
 
-```{python}
+```{python, include=FALSE}
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
